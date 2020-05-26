@@ -62,10 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
               leading: Icon(Icons.map),
               title: Text('Taped NextPage'),
               onTap: () {
-                Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => NextMain()),
-                );
-              },
+              Navigator.push(
+                context, MaterialPageRoute(builder: (context) => NextMain()),
+              );
+            },
             ),
             ListTile(
               leading: Icon(Icons.photo_album),
