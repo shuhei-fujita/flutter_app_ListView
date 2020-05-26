@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutterlistview/listview_floating_app_bar.dart';
 
 void main() => runApp(ListViewHorizontal());
 
@@ -36,9 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Container(
+      body:
+      Container(
         margin: EdgeInsets.symmetric(vertical: 20.0),
-        height: 400,
+        height: 200.0,
         child: ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[
@@ -67,6 +70,11 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 160.0,
               height: 80,
               color: Colors.orange,
+            ),
+            RaisedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ListViewFoadingAppBar()), );
+              },
             ),
           ],
         ),
