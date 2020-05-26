@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/material/text_theme.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(NextMain());
 
-class MyApp extends StatelessWidget {
+class NextMain extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -36,40 +35,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  final items = List<String>.generate(10000, (i) => "Item $i");
+  int _counter = 0;
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
+
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text('Flutter_ListView'),
+        title: Text(widget.title),
       ),
       body: Container(
-        width: double.infinity,
-        child: GridView.count(
-          crossAxisCount: 3,
-          children: List.generate(30, (index) {
-            return Column(
-              children: <Widget>[
-                Expanded(
-                    child: Image.network(
-                        'https://flutter.dev/images/flutter-mono-81x100.png'
-                    ),
-                ),
-                Text('Flutter $index',),
-              ],
-            );
-          }),
-        ),
+        color: Colors.indigo,
       ),
     );
   }
